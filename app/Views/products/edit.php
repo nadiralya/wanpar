@@ -33,15 +33,15 @@
                       <form action="<?= base_url("products/update")?>" method="post">     
                                 <div class="form-grup">
                                     <input type="hidden" name="id" value="<?= $products['id']?>">
-                                    <label for="">Nama Kelas</label>
+                                    <label for="">Nama Pakaian</label>
                                     <input type="text" class="form-control" name="nama" value="<?= $inputs['nama']==''?$products ['nama']:$inputs['nama']?>"  autofocus>
                                 </div>
                                 <div class="form-grup">
-                                    <label for="">Kapasitas</label>
+                                    <label for="">Harga</label>
                                     <input type="text" class="form-control" name="harga" value="<?= $inputs['harga']==''?$products ['harga']:$inputs['harga']?>" >
                                 </div>
                                 <div class="form-grup">
-                                    <label for="">Terisi</label>
+                                    <label for="">Stok</label>
                                     <input type="text" class="form-control" name="stok" value="<?= $inputs['stok']==''?$products ['stok']:$inputs['stok']?>" >
                                 </div>
                                 <div class="form-grup mt-3 mb-5">
