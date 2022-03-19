@@ -2,5 +2,5 @@
 
 ## Wanpars SMA Plus Pgri Cibinong 
 
- wanpars adalah aplikasi ecommerce yang dibuat emnggunakan codeigniter
+ wanpars adalah aplikasi ecommerce yang dibuat menggunakan codeigniter
 
