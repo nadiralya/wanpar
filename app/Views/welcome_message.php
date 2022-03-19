@@ -211,6 +211,7 @@
 			<li class="menu-item hidden"><a href="products">Clothes</a></li>
 			<li class="menu-item hidden"><a href="subject">Bags</a></li>
 			<li class="menu-item hidden"><a href="student">Shoes</a></li>
+			<li class="menu-item hidden"><a href="transaksi">Transaction</a></li>
 			<li class="menu-item hidden"><a href="https://codeigniter4.github.io/userguide/" target="_blank">Docs</a>
 			</li>
 			<li class="menu-item hidden"><a href="https://forum.codeigniter.com/" target="_blank">Community</a></li>

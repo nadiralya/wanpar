@@ -53,9 +53,9 @@ class Products extends BaseController
 		$this->session= \Config\Services::session();
 		if(!isset($_SESSION['inputs'])){
 			$data = array(
-			'grade'=> '',
-			'capacity'=> '',
-			'amount'=>  '',
+			'nama'=> '',
+			'harga'=> '',
+			'stok'=>  '',
 			);
 			session()->setFlashdata('inputs', $data);
 		}
@@ -70,9 +70,9 @@ class Products extends BaseController
         $id = $this->request->getPost('id') ;
         $validation = \Config\Services::validation();
         $data = array(
-            'grade' => $this->request->getPost('grade'),
-            'capacity' => $this->request->getPost('capacity'),
-            'amount' => $this->request->getPost('amount'),
+            'nama' => $this->request->getPost('nama'),
+            'harga' => $this->request->getPost('harga'),
+            'stok' => $this->request->getPost('stok'),
         );
 
         if($validation->run($data, 'products')) {
