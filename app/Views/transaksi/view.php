@@ -29,6 +29,8 @@
                   <?php foreach ($transaksi as $no => $row){?>
                   <tr>
                     <td><?= $no+1 ?> </td>
+                    <td><?= $row['id_pembeli'] ?> </td>
+                    <td><?= $row['id_barang'] ?> </td>
                     <td><?= $row['jumlah'] ?> </td>
                     <td><?= $row['total_harga'] ?> </td>
                     <td>

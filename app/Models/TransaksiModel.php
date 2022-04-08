@@ -8,6 +8,6 @@ class TransaksiModel extends Model
 {
     protected $table = 'transaksi';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'tgl_lahir', 'tmpt_lahir', 'gender'];
-    protected $session = ['name', 'tgl_lahir', 'tmpt_lahir', 'gender'];
+    protected $allowedFields = ['id_pembeli', 'id_barang', 'jumlah', 'total_harga'];
+    protected $session = ['id_pembeli', 'id_barang', 'jumlah', 'total_harga'];
 }
