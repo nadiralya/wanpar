@@ -67,26 +67,33 @@ class Validation
 
     ];
 	public $transaksi = [
-        'nama'   => [
+        'id_pembeli'   => [
             'rules' => 'required|min_length[2]',
         ],
-        'harga'   => [
+        'id_barang'   => [
             'rules' => 'required|is_natural',
         ],
-        'stok'   => [
+        'jumlah'   => [
+            'rules' => 'required|is_natural',
+        ],
+        'total_harga'   => [
             'rules' => 'required|is_natural',
         ],
     ];
     public $transaksi_errors = [
-        'nama' =>[
+        'id_pembeli' =>[
             'required' => '{field} Harus diisi',
             'min_length' => '{field} Minimum 2 karakter',
         ],
-        'harga' =>[
+        'id_barang' =>[
             'required' => '{field} Harus diisi',
             'is_natural' => '{field} Tidak boleh negatif',
         ],
-        'stok' =>[
+        'jumlah' =>[
+            'required' => '{field} Harus diisi',
+            'is_natural' => '{field} Tidak boleh negatif',
+        ],
+        'total_harga' =>[
             'required' => '{field} Harus diisi',
             'is_natural' => '{field} Tidak boleh negatif',
         ],
