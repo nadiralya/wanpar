@@ -5,7 +5,7 @@
       </div>
         <div class="col-md-12">
           <div class="card border-left-primary shadow h-100 py-2">
-          <div class="h4">Kelola Pakaian</div>
+          <div class="h4">Transaksi</div>
             <div class="card-body">
               <?php
               $success = session()->getFlashdata('success');

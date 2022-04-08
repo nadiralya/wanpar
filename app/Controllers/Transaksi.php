@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Models\ProductModel;
+use App\Models\TransaksiModel;
 
 class Transaksi extends BaseController
 {
 	public function index()
 	{
-		$model = new ProductModel();
+		$model = new TransaksiModel();
 		$data ['transaksi'] = $model->orderBy('id', 'ASC')->findAll();
         return view ('transaksi/view', $data);
 	}
@@ -40,7 +40,7 @@ class Transaksi extends BaseController
 		);
 
 		if($validation->run($data, 'transaksi')){
-			$model = new ProductModel();
+			$model = new TransaksiModel();
 			$model->insert($data);
 			session()->setFlashdata('success', 'Berhasil menyimpan transaksi ' . $this->request->getPost('transaksi'));
 			return redirect()->to(base_url('transaksi'));
@@ -61,7 +61,7 @@ class Transaksi extends BaseController
 			);
 			session()->setFlashdata('inputs', $data);
 		}
-		$model = new ProductModel();
+		$model = new TransaksiModel();
 		$data['transaksi'] = $model->where('id',$id) ->first();
 		return view('/transaksi/edit',$data);
 	}
@@ -78,7 +78,7 @@ class Transaksi extends BaseController
         );
 
         if($validation->run($data, 'transaksi')) {
-            $model = new ProductModel();
+            $model = new TransaksiModel();
             $model->update($id, $data);
             session()->setFlashdata('success', 'Berhasil update transaksi' . $this->request->getPost('transaksi'));
             return redirect()->to(base_url('transaksi'));
@@ -92,7 +92,7 @@ class Transaksi extends BaseController
 	
 	public function hapus($id)
 	{
-		$model = new ProductModel(); 
+		$model = new TransaksiModel(); 
 		$model->where('id', $id)->delete();
 		session()->setFlashdata('success', 'Berhasil delete transaksi ');
 		return redirect()->to(base_url('/transaksi'));
